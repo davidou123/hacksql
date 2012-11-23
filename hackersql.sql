@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.1
+-- version 3.5.3
 -- http://www.phpmyadmin.net
 --
--- 主机: localhost
--- 生成日期: 2012 年 11 月 20 日 10:05
--- 服务器版本: 5.0.51
--- PHP 版本: 5.2.6
+-- 主机: 127.0.0.1
+-- 生成日期: 2012 年 11 月 23 日 18:49
+-- 服务器版本: 5.5.28
+-- PHP 版本: 5.3.15
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,11 +23,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `employee`
+--
+
+CREATE TABLE IF NOT EXISTS `employee` (
+  `usrname` text NOT NULL,
+  `password` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- 转存表中的数据 `employee`
+--
+
+INSERT INTO `employee` (`usrname`, `password`) VALUES
+('admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `sqltable`
 --
 
 CREATE TABLE IF NOT EXISTS `sqltable` (
-  `id` int(20) NOT NULL auto_increment,
+  `id` int(20) NOT NULL AUTO_INCREMENT,
   `name` text NOT NULL,
   `addr` text NOT NULL,
   `age` int(11) NOT NULL,
